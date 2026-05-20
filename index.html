@@ -35,6 +35,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
+            overflow-x: hidden; /* Previene lo scorrimento orizzontale involontario */
         }
 
         .navbar {
@@ -64,6 +65,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap; /* Risolve l'overflow dei link su mobile */
+            justify-content: center;
         }
 
         .navbar a:not(.navbar-logo) {
@@ -186,6 +189,8 @@
             padding: 40px;
             margin-bottom: 30px;
             border: 1px solid #e2e8f0;
+            overflow-wrap: break-word; /* Risolve l'overflow dei link lunghi (URL) */
+            word-wrap: break-word;
         }
 
         h2.section-title {
@@ -228,6 +233,7 @@
             padding: 20px;
             border-radius: 8px;
             border: 1px solid #e2e8f0;
+            word-wrap: break-word;
         }
 
         .committee-box h3 {
@@ -297,7 +303,6 @@
             color: #e53e3e;
         }
 
-        /* Program Box Styling */
         .program-box {
             background-color: #f0f7ff;
             border: 1px solid #bee3f8;
@@ -318,6 +323,7 @@
             font-size: 1.1rem;
         }
 
+        /* Responsive Mobile Adjustments */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -329,10 +335,13 @@
             }
             .nav-right {
                 margin-left: 0;
-                margin-top: 10px;
+                margin-top: 15px;
             }
             .card {
                 padding: 25px;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr; /* Risolve l'overflow delle card dei comitati */
             }
         }
     </style>
