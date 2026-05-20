@@ -137,14 +137,32 @@
             display: block;
         }
 
-        .hero-section {
+.hero-section {
             position: relative;
             background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('AIoT_2026_Banner.png');
-            background-size: cover;
-            background-position: center 6.5%;
+            /* Invece di cover, imponiamo all'immagine di seguire sempre la larghezza al 100% */
+            background-size: 100% auto; 
+            /* Blocchiamo il posizionamento in alto al centro */
+            background-position: top center;
+            background-repeat: no-repeat;
+            /* Impostiamo un'altezza minima per evitare che collassi troppo su mobile */
+            min-height: 400px;
+            
             color: white;
-            padding: 100px 20px;
+            /* Centriamo il contenuto usando Flexbox */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        /* Gestione dello sfondo per schermi molto grandi (evita che finisca sfumando nel nulla) */
+        @media (min-width: 1920px) {
+            .hero-section {
+                background-size: cover; /* Torna a cover solo sui monitor giganti */
+            }
         }
 
         .hero-content {
