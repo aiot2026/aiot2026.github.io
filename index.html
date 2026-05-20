@@ -1,487 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIoT 2026 - Call for Papers</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIoT 2026 - Call for Papers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #1a365d; 
-            --accent-color: #2b6cb0;
-            --text-color: #2d3748;
-            --text-muted: #4a5568;
-            --bg-color: #f7fafc;
-            --card-bg: #ffffff;
-            --nav-bg: #ffffff;
-            --border-radius: 12px;
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
-        }
+    <style>
+        :root {
+            --primary-color: #1a365d; 
+            --accent-color: #2b6cb0;
+            --text-color: #2d3748;
+            --text-muted: #4a5568;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --nav-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+        }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px; 
-        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; 
+        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-        .navbar {
-            display: flex;
-            align-items: center;
-            background-color: var(--nav-bg);
-            padding: 10px 30px;
-            box-shadow: var(--shadow-md);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: var(--nav-bg);
+            padding: 10px 30px;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            margin-right: 30px;
-        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 30px;
+        }
 
-        .navbar-logo img {
-            height: 45px;
-            display: block;
-        }
+        .navbar-logo img {
+            height: 45px;
+            display: block;
+        }
 
-        .nav-main {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-        .navbar a:not(.navbar-logo) {
-            color: var(--text-muted);
-            text-decoration: none;
-            padding: 8px 16px;
-            font-weight: 500;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
+        .navbar a:not(.navbar-logo) {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 8px 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
 
-        .navbar a:not(.navbar-logo):hover {
-            background-color: #edf2f7;
-            color: var(--accent-color);
-        }
+        .navbar a:not(.navbar-logo):hover {
+            background-color: #edf2f7;
+            color: var(--accent-color);
+        }
 
-        .nav-right {
-            margin-left: auto;
-            display: flex;
-        }
+        .nav-right {
+            margin-left: auto;
+            display: flex;
+        }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-        .dropbtn {
-            background-color: transparent;
-            color: var(--text-muted);
-            padding: 8px 16px;
-            font-size: 16px;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            border-radius: 6px;
-            font-family: inherit;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-        }
+        .dropbtn {
+            background-color: transparent;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
 
-        .dropdown:hover .dropbtn {
-            background-color: #edf2f7;
-            color: var(--accent-color);
-        }
+        .dropdown:hover .dropbtn {
+            background-color: #edf2f7;
+            color: var(--accent-color);
+        }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            background-color: #ffffff;
-            min-width: 200px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            z-index: 10;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            z-index: 10;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
 
-        .dropdown-content a {
-            display: block !important;
-            padding: 12px 16px !important;
-            border-radius: 0 !important;
-        }
+        .dropdown-content a {
+            display: block !important;
+            padding: 12px 16px !important;
+            border-radius: 0 !important;
+        }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-        .hero-section {
-            position: relative;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('AIoT_2026_Banner.png');
-            background-size: cover;
-            background-position: center 6.5%;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
+        .hero-section {
+            position: relative;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('AIoT_2026_Banner.png');
+            background-size: cover;
+            background-position: center 6.5%;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-        .hero-section h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            color: white;
-        }
+        .hero-section h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: white;
+        }
 
-        .hero-section h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #e2e8f0;
-            margin-bottom: 30px;
-        }
+        .hero-section h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+        }
 
-        .hero-meta {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 500;
-            backdrop-filter: blur(5px);
-        }
+        .hero-meta {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
 
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-        .card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: 40px;
-            margin-bottom: 30px;
-            border: 1px solid #e2e8f0;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
 
-        h2.section-title {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #edf2f7;
-        }
+        h2.section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #edf2f7;
+        }
 
-        h3 {
-            color: var(--primary-color);
-            margin-top: 1.5em;
-        }
+        h3 {
+            color: var(--primary-color);
+            margin-top: 1.5em;
+        }
 
-        p {
-            text-align: justify;
-            margin-bottom: 1.2em;
-            color: var(--text-muted);
-        }
+        p {
+            text-align: justify;
+            margin-bottom: 1.2em;
+            color: var(--text-muted);
+        }
 
-        ul.topic-list {
-            color: var(--text-muted);
-            padding-left: 20px;
-        }
+        ul.topic-list {
+            color: var(--text-muted);
+            padding-left: 20px;
+        }
 
-        ul.topic-list li {
-            margin-bottom: 10px;
-        }
+        ul.topic-list li {
+            margin-bottom: 10px;
+        }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-        .committee-box {
-            background-color: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            word-wrap: break-word;
-        }
+        .committee-box {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            word-wrap: break-word;
+        }
 
-        .committee-box h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-        }
+        .committee-box h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
 
-        .committee-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .committee-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-        .committee-list li {
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        }
+        .committee-list li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
 
-        .dates-box {
-            background-color: #fffaf0;
-            border-left: 4px solid #dd6b20;
-            padding: 25px;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-        }
+        .dates-box {
+            background-color: #fffaf0;
+            border-left: 4px solid #dd6b20;
+            padding: 25px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
 
-        .dates-box p {
-            margin: 10px 0;
-            font-size: 1.05rem;
-            text-align: left;
-            color: #2d3748;
-        }
+        .dates-box p {
+            margin: 10px 0;
+            font-size: 1.05rem;
+            text-align: left;
+            color: #2d3748;
+        }
 
-        .dates-box strong {
-            color: #c53030;
-        }
+        .dates-box strong {
+            color: #c53030;
+        }
 
-        .warning-box {
-            background-color: #fff5f5;
-            border-left: 4px solid #e53e3e;
-            padding: 20px;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-            margin-top: 20px;
-        }
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin-top: 20px;
+        }
 
-        .warning-box p {
-            margin: 0;
-            text-align: left;
-            color: #742a2a;
-        }
+        .warning-box p {
+            margin: 0;
+            text-align: left;
+            color: #742a2a;
+        }
 
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-        a:hover {
-            text-decoration: underline;
-        }
+        a:hover {
+            text-decoration: underline;
+        }
 
-        code {
-            background-color: #edf2f7;
-            padding: 4px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.9em;
-            color: #e53e3e;
-        }
+        code {
+            background-color: #edf2f7;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #e53e3e;
+        }
 
-        .program-box {
-            background-color: #f0f7ff;
-            border: 1px solid #bee3f8;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            text-align: center;
-        }
+        .program-box {
+            background-color: #f0f7ff;
+            border: 1px solid #bee3f8;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
 
-        .program-box h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-            font-size: 1.4rem;
-        }
+        .program-box h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.4rem;
+        }
 
-        .program-box p {
-            text-align: center;
-            margin-bottom: 0;
-            font-size: 1.1rem;
-        }
+        .program-box p {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 15px;
-            }
-            .navbar-logo {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            .nav-right {
-                margin-left: 0;
-                margin-top: 15px;
-            }
-            .card {
-                padding: 25px;
-            }
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .navbar-logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .nav-right {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            .card {
+                padding: 25px;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="https://www.sigmobile.org/mobihoc/2026/" class="navbar-logo" target="_blank">
-            <img src="MobiHoc_2026_logo.png" alt="ACM MobiHoc 2026 Logo">
-        </a>
-        
-        <div class="nav-main">
-            <a href="#cfp">Call For Papers</a>
-            <a href="#committees">Committees</a>
-            <a href="#dates">Important Dates</a>
-            <a href="#submission">Submission Instructions</a>
-            <a href="#program">Program</a>
-        </div>
+    <nav class="navbar">
+        <a href="https://www.sigmobile.org/mobihoc/2026/" class="navbar-logo" target="_blank">
+            <img src="MobiHoc_2026_logo.png" alt="ACM MobiHoc 2026 Logo">
+        </a>
+        
+        <div class="nav-main">
+            <a href="#cfp">Call For Papers</a>
+            <a href="#committees">Committees</a>
+            <a href="#dates">Important Dates</a>
+            <a href="#submission">Submission Instructions</a>
+            <a href="#program">Program</a>
+        </div>
 
-        <div class="nav-right">
-            <div class="dropdown">
-                <button class="dropbtn">Previous Editions &#9662;</button>
-                <div class="dropdown-content">
-                    <a href="https://www.aiot-workshop.xyz/2nd-edition-2024" target="_blank">2nd Edition (2024)</a>
-                    <a href="https://www.aiot-workshop.xyz/1st-edition-2023" target="_blank">1st Edition (2023)</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+        <div class="nav-right">
+            <div class="dropdown">
+                <button class="dropbtn">Previous Editions &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="https://www.aiot-workshop.xyz/2nd-edition-2024" target="_blank">2nd Edition (2024)</a>
+                    <a href="https://www.aiot-workshop.xyz/1st-edition-2023" target="_blank">1st Edition (2023)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT)</h1>
-            <h2>In conjunction with ACM MobiHoc 2026</h2>
-            <div class="hero-meta">
-                📍 Tokyo, Japan &nbsp;|&nbsp; 📅 November 26, 2026
-            </div>
-        </div>
-    </header>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT)</h1>
+            <h2>In conjunction with ACM MobiHoc 2026</h2>
+            <div class="hero-meta">
+                📍 Tokyo, Japan &nbsp;|&nbsp; 📅 November 26, 2026
+            </div>
+        </div>
+    </header>
 
-    <div class="container">
-        
+    <div class="container">
+        
 <section id="cfp" class="card">
-            <h2 class="section-title">Call for Workshop Papers</h2>
-            <p>The rapid growth of connected devices (expected to exceed 30 billion by 2030) is reshaping how we collect and process information from the physical world. Devices ranging from smartphones and wearables to industrial sensors and microcontrollers are continuously generating vast amounts of data. Meanwhile, advanced wireless technologies such as 5G, Wi-Fi 6/7, and LPWAN are making it possible to connect a wide range of devices across large and diverse environments.</p>
+            <h2 class="section-title">Call for Workshop Papers</h2>
+            <p>The rapid growth of connected devices (expected to exceed 30 billion by 2030) is reshaping how we collect and process information from the physical world. Devices ranging from smartphones and wearables to industrial sensors and microcontrollers are continuously generating vast amounts of data. Meanwhile, advanced wireless technologies such as 5G, Wi-Fi 6/7, and LPWAN are making it possible to connect a wide range of devices across large and diverse environments.</p>
 
-            <p>In this setting, emerging approaches like Distributed, Federated, and Edge Learning are gaining momentum. These methods bring intelligence closer to the data, reducing communication overhead, enabling faster decisions, improving privacy, and supporting energy-efficient processing. Such techniques are particularly relevant in IoT infrastructures that blend local sensing, computation, and actuation, encompassing not only traditional deployments but also edge-cloud infrastructures, cyber-physical systems, and collaborative networks of autonomous agents.</p>
+            <p>In this setting, emerging approaches like Distributed, Federated, and Edge Learning are gaining momentum. These methods bring intelligence closer to the data, reducing communication overhead, enabling faster decisions, improving privacy, and supporting energy-efficient processing. Such techniques are particularly relevant in IoT infrastructures that blend local sensing, computation, and actuation, encompassing not only traditional deployments but also edge-cloud infrastructures, cyber-physical systems, and collaborative networks of autonomous agents.</p>
 
-            <p>At the same time, integrating Distributed Learning into these environments introduces several open challenges. These include compressing models for transmission over constrained or unreliable networks, managing limited and heterogeneous resources at the edge, accelerating training under dynamic conditions, and ensuring security and privacy when data remains locally distributed.</p>
+            <p>At the same time, integrating Distributed Learning into these environments introduces several open challenges. These include compressing models for transmission over constrained or unreliable networks, managing limited and heterogeneous resources at the edge, accelerating training under dynamic conditions, and ensuring security and privacy when data remains locally distributed.</p>
 
-            <p>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT) serves as a venue for researchers and practitioners exploring how Distributed and Federated Learning can be applied in real-world, resource-constrained, and large-scale IoT networks. Topics span a wide range of connected setups, where decentralized intelligence plays a key role in enabling robust, adaptive, and efficient operations.</p>
+            <p>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT) serves as a venue for researchers and practitioners exploring how Distributed and Federated Learning can be applied in real-world, resource-constrained, and large-scale IoT networks. Topics span a wide range of connected setups, where decentralized intelligence plays a key role in enabling robust, adaptive, and efficient operations.</p>
 
-            <p>Specifically, the workshop broadly welcomes contributions spanning on-device intelligence, TinyML, Distributed/Federated/Split Learning, communication-efficient AI, and adaptive edge intelligence for heterogeneous IoT environments.</p>
-            
-            <p>Topics of interest include, but are not limited to:</p>
-            
-            <ul class="topic-list">
-                <li>Efficient Machine Learning on low-power or constrained IoT systems</li>
-                <li>Continual, adaptive, and online learning techniques for dynamic IoT environments</li>
-                <li>Distributed, Federated, and Split Learning across edge and cloud systems in IoT environments</li>
-                <li>Foundation models, multimodal intelligence, and lightweight generative AI for IoT systems</li>
-                <li>AI-native protocols and cross-layer co-design for intelligent IoT infrastructures</li>
-                <li>System architectures and runtime optimization for learning in IoT systems</li>
-                <li>Hardware acceleration and platform co-design for edge intelligence in IoT systems</li>
-                <li>Communication and networking support for distributed model training in IoT systems</li>
-                <li>Protocols for model sharing, updates, and coordination in IoT systems</li>
-                <li>Edge collaboration and cross-device intelligence in IoT systems</li>
-                <li>TinyML, model compression, pruning, quantization, and inference optimization for distributed IoT systems</li>
-                <li>Privacy-preserving training methods and secure aggregation mechanisms for Distributed, Federated, and Edge Learning in IoT systems</li>
-                <li>Experimental testbeds, real-world deployments, and benchmarking tools for IoT systems</li>
-                <li>Applications in areas such as smart cities, healthcare, industrial IoT systems, agriculture, and transportation</li>
-                <li>Scalability, reliability, and performance tuning for large-scale IoT systems</li>
-                <li>Open challenges, new directions, and emerging trends in decentralized learning for IoT systems</li>
-                <li>Model personalization and adaptation techniques for Federated Learning in IoT systems</li>
-                <li>Fault tolerance, robustness, and reliability in Distributed Learning for IoT systems</li>
-                <li>Edge AI for low-latency applications in IoT systems</li>
-                <li>Energy-aware learning algorithms for IoT systems</li>
-                <li>Cross-platform Machine Learning for heterogeneous IoT systems</li>
-                <li>Network slicing and QoS-aware techniques for Federated Learning in IoT systems</li>
-                <li>Evolutionary models and online learning techniques in IoT systems</li>
-                <li>Decentralized consensus algorithms for model coordination in IoT systems</li>
-                <li>AI-driven techniques for IoT security</li>
-            </ul>
+            <p>Specifically, the workshop broadly welcomes contributions spanning on-device intelligence, TinyML, Distributed/Federated/Split Learning, communication-efficient AI, and adaptive edge intelligence for heterogeneous IoT environments.</p>
+            
+            <p>Topics of interest include, but are not limited to:</p>
+            
+            <ul class="topic-list">
+                <li>Efficient Machine Learning on low-power or constrained IoT systems</li>
+                <li>Continual, adaptive, and online learning techniques for dynamic IoT environments</li>
+                <li>Distributed, Federated, and Split Learning across edge and cloud systems in IoT environments</li>
+                <li>Foundation models, multimodal intelligence, and lightweight generative AI for IoT systems</li>
+                <li>AI-native protocols and cross-layer co-design for intelligent IoT infrastructures</li>
+                <li>System architectures and runtime optimization for learning in IoT systems</li>
+                <li>Hardware acceleration and platform co-design for edge intelligence in IoT systems</li>
+                <li>Communication and networking support for distributed model training in IoT systems</li>
+                <li>Protocols for model sharing, updates, and coordination in IoT systems</li>
+                <li>Edge collaboration and cross-device intelligence in IoT systems</li>
+                <li>TinyML, model compression, pruning, quantization, and inference optimization for distributed IoT systems</li>
+                <li>Privacy-preserving training methods and secure aggregation mechanisms for Distributed, Federated, and Edge Learning in IoT systems</li>
+                <li>Experimental testbeds, real-world deployments, and benchmarking tools for IoT systems</li>
+                <li>Applications in areas such as smart cities, healthcare, industrial IoT systems, agriculture, and transportation</li>
+                <li>Scalability, reliability, and performance tuning for large-scale IoT systems</li>
+                <li>Open challenges, new directions, and emerging trends in decentralized learning for IoT systems</li>
+                <li>Model personalization and adaptation techniques for Federated Learning in IoT systems</li>
+                <li>Fault tolerance, robustness, and reliability in Distributed Learning for IoT systems</li>
+                <li>Edge AI for low-latency applications in IoT systems</li>
+                <li>Energy-aware learning algorithms for IoT systems</li>
+                <li>Cross-platform Machine Learning for heterogeneous IoT systems</li>
+                <li>Network slicing and QoS-aware techniques for Federated Learning in IoT systems</li>
+                <li>Evolutionary models and online learning techniques in IoT systems</li>
+                <li>Decentralized consensus algorithms for model coordination in IoT systems</li>
+                <li>AI-driven techniques for IoT security</li>
+            </ul>
 
-            <p>We welcome both theoretical contributions and applied work, including case studies and practical deployments. Our aim is to bring together a diverse community of experts working at the intersection of Machine Learning, networking, systems, and connected intelligence.</p>
-        </section>
+            <p>We welcome both theoretical contributions and applied work, including case studies and practical deployments. Our aim is to bring together a diverse community of experts working at the intersection of Machine Learning, networking, systems, and connected intelligence.</p>
+        </section>
 
-        <section id="committees" class="card">
-            <h2 class="section-title">Committees</h2>
-            <div class="grid-2">
-                <div class="committee-box">
-                    <h3>Organizing Committee</h3>
-                    <ul class="committee-list">
-                        <li>Fabio Busacca, University of Catania, Italy</li>
-                        <li>Ilenia Tinnirello, University of Palermo, Italy</li>
-                        <li>Andrea Panebianco, Auburn University, AL, USA</li>
-                        <li>Ziyue Luo, The Ohio State University, OH, USA</li>
-                    </ul>
-                </div>
-                
-                <div class="committee-box">
-                    <h3>Technical Program Committee</h3>
-                    <ul class="committee-list">
-                        <li>TBD</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section id="dates" class="card">
-            <h2 class="section-title">Important Dates</h2>
-            <div class="dates-box">
-                <p>Paper submission: <strong>August 31, 2026 (11:59pm EDT)</strong></p>
-                <p>Acceptance notification: <strong>September 23, 2026</strong></p> 
-                <p>Camera ready paper: <strong>September 30, 2026 (11:59pm EDT)</strong></p>
-            </div>
-        </section>
-        
-        <section id="submission" class="card">
-            <h2 class="section-title">Submission Instructions</h2>
-            <p>Papers should be submitted via the HotCRP submission website: TBD.</p>
-            <p>Submissions must be original, unpublished work, and not currently under consideration elsewhere. Papers should not exceed 6 pages (US letter size) double column including figures, tables, and references in standard ACM format. Papers must be submitted electronically in printable PDF form. Templates for the standard ACM format can be found at this link: <a href="http://www.acm.org/publications/article-templates/proceedings-template.html" target="_blank">http://www.acm.org/publications/article-templates/proceedings-template.html</a>.</p>
-            <p>If you are using LaTeX, please refer to the sample file <code>sample-sigconf.tex</code> after you download the .zip templates file and unzip it. Note that the document class <code>\documentclass[sigconf]{acmart}</code> should be used. No changes to margins, spacing, or font sizes are allowed from those specified by the style files. Papers violating the formatting guidelines will be returned without review.</p>
-            <p>All submissions will be reviewed using a single-blind review process. The identity of referees will not be revealed to authors, but authors can keep their names on the submitted papers, on figures, bibliography, etc.</p>
+        <section id="committees" class="card">
+            <h2 class="section-title">Committees</h2>
+            <div class="grid-2">
+                <div class="committee-box">
+                    <h3>Organizing Committee</h3>
+                    <ul class="committee-list">
+                        <li>Fabio Busacca, University of Catania, Italy</li>
+                        <li>Ilenia Tinnirello, University of Palermo, Italy</li>
+                        <li>Andrea Panebianco, Auburn University, AL, USA</li>
+                        <li>Ziyue Luo, The Ohio State University, OH, USA</li>
+                    </ul>
+                </div>
+                
+                <div class="committee-box">
+                    <h3>Technical Program Committee</h3>
+                    <ul class="committee-list">
+                        <li>TBD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="dates" class="card">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="dates-box">
+                <p>Paper submission: <strong>August 31, 2026 (11:59pm EDT)</strong></p>
+                <p>Acceptance notification: <strong>September 23, 2026</strong></p> 
+                <p>Camera ready paper: <strong>September 30, 2026 (11:59pm EDT)</strong></p>
+            </div>
+        </section>
+        
+        <section id="submission" class="card">
+            <h2 class="section-title">Submission Instructions</h2>
+            <p>Papers should be submitted via the HotCRP submission website: TBD.</p>
+            <p>Submissions must be original, unpublished work, and not currently under consideration elsewhere. Papers should not exceed 6 pages (US letter size) double column including figures, tables, and references in standard ACM format. Papers must be submitted electronically in printable PDF form. Templates for the standard ACM format can be found at this link: <a href="http://www.acm.org/publications/article-templates/proceedings-template.html" target="_blank">http://www.acm.org/publications/article-templates/proceedings-template.html</a>.</p>
+            <p>If you are using LaTeX, please refer to the sample file <code>sample-sigconf.tex</code> after you download the .zip templates file and unzip it. Note that the document class <code>\documentclass[sigconf]{acmart}</code> should be used. No changes to margins, spacing, or font sizes are allowed from those specified by the style files. Papers violating the formatting guidelines will be returned without review.</p>
+            <p>All submissions will be reviewed using a single-blind review process. The identity of referees will not be revealed to authors, but authors can keep their names on the submitted papers, on figures, bibliography, etc.</p>
 
-            <h3>Dual Submission Policy</h3>
-            <p>Accepted papers will appear in the conference proceedings published by the ACM.</p>
-            <div class="warning-box">
-                <p><strong>Warning:</strong> It is ACM policy not to allow double submissions, where the same paper is submitted to more than one conference/journal concurrently. Any double submissions detected will be immediately rejected from all conferences/journals involved.</p>
-            </div>
-        </section>
+            <h3>Dual Submission Policy</h3>
+            <p>Accepted papers will appear in the conference proceedings published by the ACM.</p>
+            <div class="warning-box">
+                <p><strong>Warning:</strong> It is ACM policy not to allow double submissions, where the same paper is submitted to more than one conference/journal concurrently. Any double submissions detected will be immediately rejected from all conferences/journals involved.</p>
+            </div>
+        </section>
 
-        <section id="program" class="card">
-            <h2 class="section-title">Program</h2>
-            <div class="program-box">
-                <h3>Workshop Schedule</h3>
-                <p><strong>TBD</strong></p>
-            </div>
-        </section>
+        <section id="program" class="card">
+            <h2 class="section-title">Program</h2>
+            <div class="program-box">
+                <h3>Workshop Schedule</h3>
+                <p><strong>TBD</strong></p>
+            </div>
+        </section>
 
-    </div>
+    </div>
 
 </body>
 </html>
