@@ -35,7 +35,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
-            overflow-x: hidden; /* Previene lo scorrimento orizzontale involontario */
+            overflow-x: hidden;
         }
 
         .navbar {
@@ -65,7 +65,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            flex-wrap: wrap; /* Risolve l'overflow dei link su mobile */
+            flex-wrap: wrap;
             justify-content: center;
         }
 
@@ -189,7 +189,7 @@
             padding: 40px;
             margin-bottom: 30px;
             border: 1px solid #e2e8f0;
-            overflow-wrap: break-word; /* Risolve l'overflow dei link lunghi (URL) */
+            overflow-wrap: break-word;
             word-wrap: break-word;
         }
 
@@ -323,7 +323,6 @@
             font-size: 1.1rem;
         }
 
-        /* Responsive Mobile Adjustments */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -341,7 +340,7 @@
                 padding: 25px;
             }
             .grid-2 {
-                grid-template-columns: 1fr; /* Risolve l'overflow delle card dei comitati */
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -386,20 +385,30 @@
         
         <section id="cfp" class="card">
             <h2 class="section-title">Call for Workshop Papers</h2>
-            <p>The rapid growth of connected devices, projected to surpass 30 billion by 2030, is transforming how data is collected, processed, and acted upon in real-world environments. In this evolving landscape, emerging paradigms like Distributed, Federated, and Edge Learning are becoming essential. These approaches bring intelligence closer to the data source, minimizing communication overhead, reducing latency, improving privacy, and enabling energy-efficient computation. However, integrating Distributed Learning into IoT systems presents several open challenges: how to compress models for constrained networks, how to manage limited and heterogeneous edge resources, how to accelerate training under dynamic conditions, and how to preserve security and privacy while keeping data decentralized, to name a few.</p>
+            <p>The rapid growth of connected devices (expected to exceed 30 billion by 2030) is reshaping how we collect and process information from the physical world. Devices ranging from smartphones and wearables to industrial sensors and microcontrollers are continuously generating vast amounts of data. Meanwhile, advanced wireless technologies such as 5G, Wi-Fi 6/7, and LPWAN are making it possible to connect a wide range of devices across large and diverse environments.</p>
 
-            <p>AIoT, the Third International ACM MobiHoc Workshop on the Integration between Distributed Machine Learning and the Internet of Things, aims to bring together researchers and practitioners from academia and industry to explore the design, deployment, and operation of distributed intelligence in resource-constrained and large-scale IoT systems.</p>
+            <p>In this setting, emerging approaches like distributed, Federated, and Edge Learning are gaining momentum. These methods bring intelligence closer to the data, reducing communication overhead, enabling faster decisions, improving privacy, and supporting energy-efficient processing. Such techniques are particularly relevant in IoT systems that blend local sensing, computation, and actuation—encompassing not only traditional IoT deployments but also edge-cloud infrastructures, cyber-physical systems, and collaborative networks of autonomous agents.</p>
+
+            <p>At the same time, integrating Distributed Learning into these IoT systems introduces several open challenges. These include compressing models to transmit over constrained or unreliable networks, managing limited and heterogeneous resources at the edge, accelerating training under dynamic conditions, and ensuring security and privacy when data remains locally distributed.</p>
+
+            <p>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT) serves as a venue for researchers and practitioners exploring how Distributed and Federated Learning can be applied in real-world, resource-constrained, and large-scale IoT systems. Topics span a wide range of connected IoT systems, where decentralized intelligence plays a key role in enabling robust, adaptive, and efficient operations.</p>
+
+            <p>Specifically, the workshop broadly welcomes contributions spanning on-device intelligence, TinyML, Distributed/Federated/Split Learning, communication-efficient AI, and adaptive edge intelligence for heterogeneous IoT systems.</p>
             
-            <p>We invite original contributions in the form of theoretical insights, algorithmic advances, experimental evaluations, and real-world applications. Topics of interest include, but are not limited to:</p>
+            <p>Topics of interest include, but are not limited to:</p>
             
             <ul class="topic-list">
                 <li>Efficient Machine Learning on low-power or constrained IoT systems</li>
+                <li>Continual, adaptive, and online learning techniques for dynamic IoT environments</li>
                 <li>Distributed, Federated, and Split Learning across edge and cloud systems in IoT environments</li>
+                <li>Foundation models, multimodal intelligence, and lightweight generative AI for IoT systems</li>
+                <li>AI-native protocol and cross-layer co-design for intelligent IoT infrastructures</li>
                 <li>System architectures and runtime optimization for learning in IoT systems</li>
                 <li>Hardware acceleration and platform co-design for edge intelligence in IoT systems</li>
                 <li>Communication and networking support for distributed model training in IoT systems</li>
                 <li>Protocols for model sharing, updates, and coordination in IoT systems</li>
                 <li>Edge collaboration and cross-device intelligence in IoT systems</li>
+                <li>TinyML, model compression, pruning, quantization, and inference optimization for distributed IoT systems</li>
                 <li>Privacy-preserving training methods and secure aggregation mechanisms for distributed, Federated, and Edge Learning in IoT systems</li>
                 <li>Experimental testbeds, real-world deployments, and benchmarking tools for IoT systems</li>
                 <li>Applications in areas such as smart cities, healthcare, industrial IoT systems, agriculture, and transportation</li>
@@ -415,6 +424,8 @@
                 <li>Decentralized consensus algorithms for model coordination in IoT systems</li>
                 <li>AI techniques for IoT security</li>
             </ul>
+
+            <p>We welcome both theoretical contributions and applied work, including case studies and practical deployments. Our aim is to bring together a diverse community of experts working at the intersection of Machine Learning, networking, systems, and connected intelligence in IoT systems.</p>
         </section>
 
         <section id="committees" class="card">
