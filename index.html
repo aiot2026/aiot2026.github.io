@@ -139,12 +139,29 @@
 
         .hero-section {
             position: relative;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('AIoT_2026_Banner.png');
-            background-size: cover;
-            background-position: center 6.5%;
+            background-color: #0f172a; 
             color: white;
             padding: 100px 20px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            isolation: isolate; 
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('AIoT_2026_Banner.png');
+            background-size: 100% auto; 
+            background-position: top center; 
+            background-repeat: no-repeat; 
+            z-index: -1;
         }
 
         .hero-content {
@@ -222,9 +239,9 @@
             margin-bottom: 10px;
         }
 
-        .grid-2 {
+        .grid-1 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr;
             gap: 25px;
         }
 
@@ -339,9 +356,6 @@
             .card {
                 padding: 25px;
             }
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -373,7 +387,7 @@
 
     <header class="hero-section">
         <div class="hero-content">
-            <h1>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT)</h1>
+            <h1>The Third International Workshop on the Integration of Distributed Machine Learning and the Internet of Things (AIoT)</h1>
             <h2>In conjunction with ACM MobiHoc 2026</h2>
             <div class="hero-meta">
                 📍 Tokyo, Japan &nbsp;|&nbsp; 📅 November 26, 2026
@@ -383,7 +397,7 @@
 
     <div class="container">
         
-<section id="cfp" class="card">
+        <section id="cfp" class="card">
             <h2 class="section-title">Call for Workshop Papers</h2>
             <p>The rapid growth of connected devices (expected to exceed 30 billion by 2030) is reshaping how we collect and process information from the physical world. Devices ranging from smartphones and wearables to industrial sensors and microcontrollers are continuously generating vast amounts of data. Meanwhile, advanced wireless technologies such as 5G, Wi-Fi 6/7, and LPWAN are making it possible to connect a wide range of devices across large and diverse environments.</p>
 
@@ -391,7 +405,7 @@
 
             <p>At the same time, integrating Distributed Learning into these environments introduces several open challenges. These include compressing models for transmission over constrained or unreliable networks, managing limited and heterogeneous resources at the edge, accelerating training under dynamic conditions, and ensuring security and privacy when data remains locally distributed.</p>
 
-            <p>The Third International Workshop on the Integration between Distributed Machine Learning and the Internet of Things (AIoT) serves as a venue for researchers and practitioners exploring how Distributed and Federated Learning can be applied in real-world, resource-constrained, and large-scale IoT networks. Topics span a wide range of connected setups, where decentralized intelligence plays a key role in enabling robust, adaptive, and efficient operations.</p>
+            <p>The Third International Workshop on the Integration of Distributed Machine Learning and the Internet of Things (AIoT) serves as a venue for researchers and practitioners exploring how Distributed and Federated Learning can be applied in real-world, resource-constrained, and large-scale IoT networks. Topics span a wide range of connected setups, where decentralized intelligence plays a key role in enabling robust, adaptive, and efficient operations.</p>
 
             <p>Specifically, the workshop broadly welcomes contributions spanning on-device intelligence, TinyML, Distributed/Federated/Split Learning, communication-efficient AI, and adaptive edge intelligence for heterogeneous IoT environments.</p>
             
@@ -422,7 +436,7 @@
                 <li>Network slicing and QoS-aware techniques for Federated Learning in IoT systems</li>
                 <li>Evolutionary models and online learning techniques in IoT systems</li>
                 <li>Decentralized consensus algorithms for model coordination in IoT systems</li>
-                <li>AI-driven techniques for IoT security</li>
+                <li>AI-driven techniques for IoT security and resilience</li>
             </ul>
 
             <p>We welcome both theoretical contributions and applied work, including case studies and practical deployments. Our aim is to bring together a diverse community of experts working at the intersection of Machine Learning, networking, systems, and connected intelligence.</p>
@@ -430,7 +444,7 @@
 
         <section id="committees" class="card">
             <h2 class="section-title">Committees</h2>
-            <div class="grid-2">
+            <div class="grid-1">
                 <div class="committee-box">
                     <h3>Organizing Committee</h3>
                     <ul class="committee-list">
@@ -446,8 +460,8 @@
                     <ul class="committee-list">
                         <li>Yuan Wu, University of Macau, China</li>
                         <li>Jihong Park, Singapore University of Technology and Design, Singapore</li>
-                        <li>Marco Cominelli, Polytechnic University of Milan, Italy</li>
-                        <li>Corrado Puligheddu, Polytechnic University of Turin, Italy</li>
+                        <li>Marco Cominelli, Politecnico di Milano, Italy</li>
+                        <li>Corrado Puligheddu, Politecnico di Torino, Italy</li>
                         <li>Raoul Raftopoulos, University of Catania, Italy</li>
                         <li>Dario Scuderi, University of Catania, Italy</li>
                         <li><em>More members to be announced...</em></li>
